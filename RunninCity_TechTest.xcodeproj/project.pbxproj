@@ -13,6 +13,9 @@
 		7B92EE0B2656003500B626B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B92EE092656003500B626B4 /* Main.storyboard */; };
 		7B92EE0D2656003500B626B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B92EE0C2656003500B626B4 /* Assets.xcassets */; };
 		7B92EE102656003500B626B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B92EE0E2656003500B626B4 /* LaunchScreen.storyboard */; };
+		7B92EE1C2656049C00B626B4 /* LmStudioJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B92EE1B2656049C00B626B4 /* LmStudioJSON.swift */; };
+		7B92EE1E2656072400B626B4 /* RequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B92EE1D2656072400B626B4 /* RequestService.swift */; };
+		7B92EE202656082700B626B4 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B92EE1F2656082700B626B4 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		7B92EE0C2656003500B626B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B92EE0F2656003500B626B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B92EE112656003500B626B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B92EE1B2656049C00B626B4 /* LmStudioJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LmStudioJSON.swift; sourceTree = "<group>"; };
+		7B92EE1D2656072400B626B4 /* RequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestService.swift; sourceTree = "<group>"; };
+		7B92EE1F2656082700B626B4 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,50 @@
 		7B92EE022656003500B626B4 /* RunninCity_TechTest */ = {
 			isa = PBXGroup;
 			children = (
-				7B92EE032656003500B626B4 /* AppDelegate.swift */,
-				7B92EE052656003500B626B4 /* SceneDelegate.swift */,
+				7B92EE1A265601C500B626B4 /* Supported Files */,
+				7B92EE17265601BA00B626B4 /* Model */,
+				7B92EE19265601C200B626B4 /* View */,
+				7B92EE18265601BF00B626B4 /* Controller */,
+			);
+			path = RunninCity_TechTest;
+			sourceTree = "<group>";
+		};
+		7B92EE17265601BA00B626B4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7B92EE1B2656049C00B626B4 /* LmStudioJSON.swift */,
+				7B92EE1D2656072400B626B4 /* RequestService.swift */,
+				7B92EE1F2656082700B626B4 /* NetworkError.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7B92EE18265601BF00B626B4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				7B92EE072656003500B626B4 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7B92EE19265601C200B626B4 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				7B92EE092656003500B626B4 /* Main.storyboard */,
 				7B92EE0C2656003500B626B4 /* Assets.xcassets */,
 				7B92EE0E2656003500B626B4 /* LaunchScreen.storyboard */,
-				7B92EE112656003500B626B4 /* Info.plist */,
 			);
-			path = RunninCity_TechTest;
+			path = View;
+			sourceTree = "<group>";
+		};
+		7B92EE1A265601C500B626B4 /* Supported Files */ = {
+			isa = PBXGroup;
+			children = (
+				7B92EE112656003500B626B4 /* Info.plist */,
+				7B92EE032656003500B626B4 /* AppDelegate.swift */,
+				7B92EE052656003500B626B4 /* SceneDelegate.swift */,
+			);
+			path = "Supported Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +181,9 @@
 				7B92EE082656003500B626B4 /* ViewController.swift in Sources */,
 				7B92EE042656003500B626B4 /* AppDelegate.swift in Sources */,
 				7B92EE062656003500B626B4 /* SceneDelegate.swift in Sources */,
+				7B92EE202656082700B626B4 /* NetworkError.swift in Sources */,
+				7B92EE1E2656072400B626B4 /* RequestService.swift in Sources */,
+				7B92EE1C2656049C00B626B4 /* LmStudioJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +332,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 56PJN96NRT;
-				INFOPLIST_FILE = RunninCity_TechTest/Info.plist;
+				INFOPLIST_FILE = "RunninCity_TechTest/Supported Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +351,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 56PJN96NRT;
-				INFOPLIST_FILE = RunninCity_TechTest/Info.plist;
+				INFOPLIST_FILE = "RunninCity_TechTest/Supported Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
