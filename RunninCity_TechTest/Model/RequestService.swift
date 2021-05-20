@@ -24,7 +24,10 @@ final class RequestService {
                 return
             }
             
-           
+            guard let responseJSON = try? JSONDecoder().decode(LmStudioJSON.self, from: data) else {
+                callback(.failure(.undecodableData))
+                return
+            }
             callback(.success(responseJSON))
         }
         task.resume()
