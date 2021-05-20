@@ -22,7 +22,18 @@ final class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        requestService.request { result in
+            switch result {
+            case .success(let data):
+                print(data)
+                DispatchQueue.main.async {
+                    self.navigationController?.navigationItem.title = data.city
+
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 
 
