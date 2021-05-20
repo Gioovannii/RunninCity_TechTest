@@ -18,7 +18,13 @@ final class RequestService {
                 return
             }
             
+            guard let response = response as? HTTPURLResponse,
+                  response.statusCode == 200 else {
+                callback(.failure(.incorrectResponse))
+                return
+            }
             
+           
             callback(.success(responseJSON))
         }
         task.resume()
