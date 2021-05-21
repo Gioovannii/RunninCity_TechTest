@@ -12,7 +12,7 @@ import MapKit
 final class ViewController: UIViewController {
     
     // MARK: - Properties and outlets
-
+    
     private let requestService = RequestService()
     @IBOutlet var mapView: UIView!
     
