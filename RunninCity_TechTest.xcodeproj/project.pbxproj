@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B8C3A6526575724004B128F /* InterestingPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8C3A6426575724004B128F /* InterestingPoints.swift */; };
 		7B92EE042656003500B626B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B92EE032656003500B626B4 /* AppDelegate.swift */; };
 		7B92EE062656003500B626B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B92EE052656003500B626B4 /* SceneDelegate.swift */; };
 		7B92EE082656003500B626B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B92EE072656003500B626B4 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B8C3A6426575724004B128F /* InterestingPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestingPoints.swift; sourceTree = "<group>"; };
 		7B92EE002656003500B626B4 /* RunninCity_TechTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunninCity_TechTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B92EE032656003500B626B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B92EE052656003500B626B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				7B92EE1B2656049C00B626B4 /* LmStudioJSON.swift */,
 				7B92EE1D2656072400B626B4 /* RequestService.swift */,
 				7B92EE1F2656082700B626B4 /* NetworkError.swift */,
+				7B8C3A6426575724004B128F /* InterestingPoints.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				7B92EE062656003500B626B4 /* SceneDelegate.swift in Sources */,
 				7B92EE202656082700B626B4 /* NetworkError.swift in Sources */,
 				7B92EE1E2656072400B626B4 /* RequestService.swift in Sources */,
+				7B8C3A6526575724004B128F /* InterestingPoints.swift in Sources */,
 				7B92EE1C2656049C00B626B4 /* LmStudioJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,6 +337,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 56PJN96NRT;
 				INFOPLIST_FILE = "RunninCity_TechTest/Supported Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -352,6 +357,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 56PJN96NRT;
 				INFOPLIST_FILE = "RunninCity_TechTest/Supported Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
