@@ -45,7 +45,7 @@ final class ViewController: UIViewController {
                     self.mapView.delegate = self
                 }
             case .failure(let error):
-                print(error)
+                print(error.localizedDescription)
             }
         }
     }
