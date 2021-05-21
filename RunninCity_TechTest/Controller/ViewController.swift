@@ -14,7 +14,7 @@ final class ViewController: UIViewController {
     // MARK: - Properties and outlets
     
     private let requestService = RequestService()
-    @IBOutlet var mapView: UIView!
+    @IBOutlet weak var mapView: MKMapView!
     
     let location: CLLocationCoordinate2D? = nil
     var currentLocation: CLLocation?
