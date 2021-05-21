@@ -20,13 +20,13 @@ final class ViewController: UIViewController {
     var currentLocation: CLLocation?
     
     // MARK: - Life Cycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         requestService.request { result in
             switch result {
             case .success(let data):
-                print(data)
+                print("*\(data)")
                 DispatchQueue.main.async {
                     self.navigationController?.navigationItem.title = data.city
 
