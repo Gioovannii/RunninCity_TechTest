@@ -60,7 +60,7 @@ extension ViewController: MKMapViewDelegate {
         } else {
             annotationView?.annotation = annotation
         }
-        annotationView?.glyphText = "💰"
+        annotationView?.glyphText = "🏛"
         annotationView?.markerTintColor = .black
         
         return annotationView
