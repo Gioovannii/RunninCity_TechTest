@@ -51,3 +51,21 @@ final class ViewController: UIViewController {
     }
 }
 
+extension ViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKUserLocation {
+            return nil
+        }
+        
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "InterestingPoints") as? MKMarkerAnnotationView
+        if annotationView == nil {
+            annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "InterestingPoints")
+        } else {
+            annotationView?.annotation = annotation
+        }
+        annotationView?.glyphText = "💰"
+        annotationView?.markerTintColor = .black
+        
+        return annotationView
+    }
+}
