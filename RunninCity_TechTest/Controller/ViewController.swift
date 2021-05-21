@@ -13,10 +13,9 @@ final class ViewController: UIViewController {
     // MARK: - Properties and outlets
     
     private let requestService = RequestService()
-    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak private var mapView: MKMapView!
     
-    let location: CLLocationCoordinate2D? = nil
-    var currentLocation: CLLocation?
+    private let location: CLLocationCoordinate2D? = nil
     
     // MARK: - Life Cycle
     
@@ -40,7 +39,6 @@ final class ViewController: UIViewController {
                     let locations: [InterestingPoints] = data.locations.map { InterestingPoints(name: $0.name, longitude: $0.longitude, latitude: $0.latitude)}
                     
                     self.mapView.addAnnotations(locations)
-                    
                     self.mapView.delegate = self
                 }
             case .failure(let error):
