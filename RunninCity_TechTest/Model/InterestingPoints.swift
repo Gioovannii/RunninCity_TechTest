@@ -28,7 +28,7 @@ extension InterestingPoints: MKAnnotation {
         }
     }
     
-    var title: String? {
+    var subtitle: String? {
         get {
             return name
         }

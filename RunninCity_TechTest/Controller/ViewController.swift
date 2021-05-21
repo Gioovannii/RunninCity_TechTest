@@ -62,7 +62,6 @@ extension ViewController: MKMapViewDelegate {
         }
         annotationView?.glyphText = "🏛"
         annotationView?.markerTintColor = .black
-        
         return annotationView
     }
 }
