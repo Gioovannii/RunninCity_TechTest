@@ -32,5 +32,16 @@ final class URLSessionFake: URLSession {
 final class URLSessionDataTaskFake: URLSessionDataTask {
     private var completionHandler: ((Data?, URLResponse?, Error?) -> Void)?
     
-   
+    private var data: Data?
+    private var urlResponse: URLResponse?
+    private var responseError: Error?
+    
+    init(data: Data?, urlResponse: URLResponse?, responseError: Error?, completionHandler: ((Data?, URLResponse?, Error?) -> Void)?) {
+        self.data = data
+        self.urlResponse = urlResponse
+        self.responseError = responseError
+        self.completionHandler = completionHandler
+    }
+    
+    
 }
