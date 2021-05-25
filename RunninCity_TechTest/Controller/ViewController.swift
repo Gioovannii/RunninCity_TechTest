@@ -14,9 +14,7 @@ final class ViewController: UIViewController {
     
     private let requestService = RequestService()
     @IBOutlet weak private var mapView: MKMapView!
-    
-    private let location: CLLocationCoordinate2D? = nil
-    
+        
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
