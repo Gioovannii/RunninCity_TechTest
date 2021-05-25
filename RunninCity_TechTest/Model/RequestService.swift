@@ -9,6 +9,12 @@ import Foundation
 
 final class RequestService {
     
+    private  let session: URLSession
+    
+    init(session: URLSession = URLSession(configuration: .default)) {
+        self.session = session
+    }
+    
     func request(callback: @escaping (Result<LmStudioJSON, NetworkError>) -> Void) {
         guard let baseUrl = URL(string: "http://lmstudio.free.fr/lyon.json") else { return }
         let task = URLSession.shared.dataTask(with: baseUrl) { (data, response, error) in
