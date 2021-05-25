@@ -27,4 +27,10 @@ final class URLSessionFake: URLSession {
     }
 }
 
+// MARK: - DataTasks
 
+final class URLSessionDataTaskFake: URLSessionDataTask {
+    private var completionHandler: ((Data?, URLResponse?, Error?) -> Void)?
+    
+   
+}
