@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-final class ViewController: UIViewController {
+final class HomeViewController: UIViewController {
     
     // MARK: - Properties and outlets
     
@@ -19,10 +19,13 @@ final class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchInterestingPoints()
+    }
+    
+    private func fetchInterestingPoints() {
         requestService.request { result in
             switch result {
             case .success(let data):
-                print("*\(data)")
                 DispatchQueue.main.async {
                     self.navigationItem.title = data.city
                     guard let latitude = data.locations.first?.latitude else { return }
@@ -40,13 +43,15 @@ final class ViewController: UIViewController {
                     self.mapView.delegate = self
                 }
             case .failure(let error):
+                // TODO: - Alert
+                
                 print(error.localizedDescription)
             }
         }
     }
 }
 
-extension ViewController: MKMapViewDelegate {
+extension HomeViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if annotation is MKUserLocation {
             return nil
