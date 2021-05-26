@@ -30,7 +30,23 @@ final class RequestServiceTestCase: XCTestCase {
         wait(for: [expectation], timeout: 0.01)
     }
     
-    // MARK: - Get Interesting Points Failed
+    func testGetInterestingPoints_ShouldPostFailedCallback_IfDataIsNil() {
+        let service = RequestService(session: URLSessionFake(data: nil, response: nil, error: nil))
+
+        let expectation = XCTestExpectation(description: "Wait for queue change")
+
+        service.request { (result: Result<LmStudioJSON, NetworkError>) in
+
+            guard case .failure(let error) = result else {
+                XCTFail("error")
+                return
+            }
+
+            XCTAssertNotNil(error)
+            XCTAssertEqual(error.description, "There is no data")
+            expectation.fulfill()
+        }
+    }
     
     func testGetInterestingPoints_ShouldPostFailedCallback_IfIncorrectDataAndResponseKO() {
         let service = RequestService(session: URLSessionFake(data: FakeResponseData.incorrectData, response: FakeResponseData.responseKO, error: nil))
