@@ -48,8 +48,9 @@ final class RequestServiceTestCase: XCTestCase {
         }
     }
     
-    func testGetInterestingPoints_ShouldPostFailedCallback_IfIncorrectDataAndResponseKO() {
-        let service = RequestService(session: URLSessionFake(data: FakeResponseData.incorrectData, response: FakeResponseData.responseKO, error: nil))
+    // MARK: - Get Interesting Points Failed - Undecodable Data
+    func testGetInterestingPoints_ShouldPostFailedCallback_IfIncorrectData() {
+        let service = RequestService(session: URLSessionFake(data: FakeResponseData.incorrectData, response: FakeResponseData.responseOK, error: nil))
 
         let expectation = XCTestExpectation(description: "Wait for queue change")
 
@@ -61,7 +62,27 @@ final class RequestServiceTestCase: XCTestCase {
             }
 
             XCTAssertNotNil(error)
+            XCTAssertEqual(error.description, "Data is undecodable")
             expectation.fulfill()
         }
     }
+
+    func testGetInterestingPoints_ShouldPostFailedCallback_IfResponseKO() {
+        let service = RequestService(session: URLSessionFake(data: FakeResponseData.correctData, response: FakeResponseData.responseKO, error: nil))
+
+        let expectation = XCTestExpectation(description: "Wait for queue change")
+
+        service.request { (result: Result<LmStudioJSON, NetworkError>) in
+
+            guard case .failure(let error) = result else {
+                XCTFail("error")
+                return
+            }
+
+            XCTAssertNotNil(error)
+            XCTAssertEqual(error.description, "There is no response")
+            expectation.fulfill()
+        }
+    }
+
 }
