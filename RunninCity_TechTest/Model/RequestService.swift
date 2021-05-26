@@ -9,7 +9,8 @@ import Foundation
 
 final class RequestService {
     
-    private  let session: URLSession
+    private let session: URLSession
+    private var task: URLSessionDataTask?
     
     init(session: URLSession = URLSession(configuration: .default)) {
         self.session = session
