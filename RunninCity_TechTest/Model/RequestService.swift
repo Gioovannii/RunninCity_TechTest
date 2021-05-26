@@ -39,6 +39,6 @@ final class RequestService {
             }
             callback(.success(responseJSON))
         }
-        task.resume()
+        task?.resume()
     }
 }
