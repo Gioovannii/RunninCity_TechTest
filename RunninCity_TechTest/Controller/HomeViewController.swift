@@ -44,9 +44,7 @@ final class HomeViewController: UIViewController {
                     self.mapView.delegate = self
                 }
             case .failure(let error):
-                // TODO: - Alert
-                
-                print(error.localizedDescription)
+                self.presentAlert(title: "Error", message: error.description)
             }
         }
     }

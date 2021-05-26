@@ -21,6 +21,8 @@
 		7B92EE1E2656072400B626B4 /* RequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B92EE1D2656072400B626B4 /* RequestService.swift */; };
 		7B92EE202656082700B626B4 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B92EE1F2656082700B626B4 /* NetworkError.swift */; };
 		7B962956265E05FA000C069E /* RequestServiceTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B962955265E05FA000C069E /* RequestServiceTestCase.swift */; };
+		7B96295A265E823A000C069E /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B962959265E823A000C069E /* UIViewController.swift */; };
+		7B96295D265E8396000C069E /* InterestingPointTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B96295C265E8396000C069E /* InterestingPointTestCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		7B92EE1D2656072400B626B4 /* RequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestService.swift; sourceTree = "<group>"; };
 		7B92EE1F2656082700B626B4 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		7B962955265E05FA000C069E /* RequestServiceTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestServiceTestCase.swift; sourceTree = "<group>"; };
+		7B962959265E823A000C069E /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		7B96295C265E8396000C069E /* InterestingPointTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestingPointTestCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				7B85A1E2265CD3140049A3F2 /* Fake */,
-				7B85A1E3265CD3200049A3F2 /* LmStudioTests */,
+				7B85A1E3265CD3200049A3F2 /* RequestService */,
+				7B96295B265E8373000C069E /* InterestingPoints */,
 				7B85A1D8265CD0D00049A3F2 /* Info.plist */,
 			);
 			path = RunninCity_TechTestTests;
@@ -91,13 +96,13 @@
 			path = Fake;
 			sourceTree = "<group>";
 		};
-		7B85A1E3265CD3200049A3F2 /* LmStudioTests */ = {
+		7B85A1E3265CD3200049A3F2 /* RequestService */ = {
 			isa = PBXGroup;
 			children = (
 				7B85A1E0265CD1A60049A3F2 /* LmStudio.json */,
 				7B962955265E05FA000C069E /* RequestServiceTestCase.swift */,
 			);
-			path = LmStudioTests;
+			path = RequestService;
 			sourceTree = "<group>";
 		};
 		7B92EDF72656003500B626B4 = {
@@ -121,6 +126,7 @@
 		7B92EE022656003500B626B4 /* RunninCity_TechTest */ = {
 			isa = PBXGroup;
 			children = (
+				7B962957265E8214000C069E /* Helpers */,
 				7B92EE1A265601C500B626B4 /* Supported Files */,
 				7B92EE17265601BA00B626B4 /* Model */,
 				7B92EE19265601C200B626B4 /* View */,
@@ -166,6 +172,30 @@
 				7B92EE052656003500B626B4 /* SceneDelegate.swift */,
 			);
 			path = "Supported Files";
+			sourceTree = "<group>";
+		};
+		7B962957265E8214000C069E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7B962958265E821F000C069E /* Extensions */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7B962958265E821F000C069E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7B962959265E823A000C069E /* UIViewController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7B96295B265E8373000C069E /* InterestingPoints */ = {
+			isa = PBXGroup;
+			children = (
+				7B96295C265E8396000C069E /* InterestingPointTestCase.swift */,
+			);
+			path = InterestingPoints;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +302,7 @@
 				7B85A1D7265CD0D00049A3F2 /* FakeResponseData.swift in Sources */,
 				7B962956265E05FA000C069E /* RequestServiceTestCase.swift in Sources */,
 				7B85A1E5265CDA1E0049A3F2 /* URLSessionFake.swift in Sources */,
+				7B96295D265E8396000C069E /* InterestingPointTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +316,7 @@
 				7B92EE202656082700B626B4 /* NetworkError.swift in Sources */,
 				7B92EE1E2656072400B626B4 /* RequestService.swift in Sources */,
 				7B8C3A6526575724004B128F /* InterestingPoints.swift in Sources */,
+				7B96295A265E823A000C069E /* UIViewController.swift in Sources */,
 				7B92EE1C2656049C00B626B4 /* LmStudioJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
