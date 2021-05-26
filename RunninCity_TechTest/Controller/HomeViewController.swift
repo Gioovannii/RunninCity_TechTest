@@ -22,6 +22,7 @@ final class HomeViewController: UIViewController {
         fetchInterestingPoints()
     }
     
+    /// Network Call
     private func fetchInterestingPoints() {
         requestService.request { result in
             switch result {
@@ -50,6 +51,8 @@ final class HomeViewController: UIViewController {
         }
     }
 }
+
+// MARK: - MKMApViewDelegate
 
 extension HomeViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
