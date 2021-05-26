@@ -10,7 +10,7 @@ import XCTest
 
 final class RequestServiceTestCase: XCTestCase {
     
-    // MARK: - Get Interesting Points
+    // MARK: - Request Success
     
     func testGetInterestingPoints_ShouldPostSuccess_IfNoError() {
         let service = RequestService(session: URLSessionFake(data: FakeResponseData.correctData, response: FakeResponseData.responseOK, error: nil))
