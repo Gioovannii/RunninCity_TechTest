@@ -15,11 +15,11 @@ enum NetworkError: Error {
     var description: String {
         switch self {
         case .noData:
-            return "There is no data"
+            return "Il n'y a pas de données"
         case .incorrectResponse:
-            return "There is no response"
+            return "En attente de réponse"
         case .undecodableData:
-            return "Data is undecodable"
+            return "Les donnée sont introuvable"
         }
     }
 }

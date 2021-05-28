@@ -22,7 +22,6 @@ final class RequestService {
         task = session.dataTask(with: baseUrl) { (data, response, error) in
 
             guard let data = data, error == nil else {
-                print (error?.localizedDescription ?? "Response Error")
                 callback(.failure(.noData))
                 return
             }
