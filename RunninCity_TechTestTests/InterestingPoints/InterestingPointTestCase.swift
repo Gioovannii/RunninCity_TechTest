@@ -10,11 +10,13 @@ import XCTest
 
 final class InterestingPointsTestCase: XCTestCase {
     
-    func testGetSubtitle_ShouldreturnName_IfInterestingPointIsFetch() {
+    func testGetSubtitle_ShouldReturnName_IfInterestingPointIsFetch() {
         let point = InterestingPoints(name: "Paris", longitude: 0.0, latitude: 0.0)
         XCTAssertEqual(point.subtitle, "Paris")
-        XCTAssertEqual(point.location.coordinate.longitude, 0.0)
-        XCTAssertEqual(point.location.coordinate.latitude, 0.0)
-
+        
+        XCTAssertEqual(point.coordinate.latitude, point.location.coordinate.latitude)
+        XCTAssertEqual(point.coordinate.longitude, point.location.coordinate.longitude)
     }
 }
+
+

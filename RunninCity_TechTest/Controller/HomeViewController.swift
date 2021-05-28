@@ -44,7 +44,9 @@ final class HomeViewController: UIViewController {
                     self.mapView.delegate = self
                 }
             case .failure(let error):
-                self.presentAlert(title: "Error", message: error.description)
+                DispatchQueue.main.async {
+                    self.presentAlert(title: "Erreur", message: error.description)
+                }
             }
         }
     }

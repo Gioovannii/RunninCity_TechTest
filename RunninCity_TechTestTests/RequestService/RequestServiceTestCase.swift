@@ -43,7 +43,7 @@ final class RequestServiceTestCase: XCTestCase {
             }
 
             XCTAssertNotNil(error)
-            XCTAssertEqual(error.description, "There is no data")
+            XCTAssertEqual(error.description, "Il n'y a pas de données")
             expectation.fulfill()
         }
     }
@@ -62,7 +62,7 @@ final class RequestServiceTestCase: XCTestCase {
             }
 
             XCTAssertNotNil(error)
-            XCTAssertEqual(error.description, "Data is undecodable")
+            XCTAssertEqual(error.description, "Les donnée sont introuvable")
             expectation.fulfill()
         }
     }
@@ -80,7 +80,7 @@ final class RequestServiceTestCase: XCTestCase {
             }
 
             XCTAssertNotNil(error)
-            XCTAssertEqual(error.description, "There is no response")
+            XCTAssertEqual(error.description, "En attente de réponse")
             expectation.fulfill()
         }
     }
